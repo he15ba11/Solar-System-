@@ -10,5 +10,5 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps: 
-      - name: printing
-        run: cat README.md
+      - name: printing read me
+        run: cat /he15ba11/Solar-System-/README.md
