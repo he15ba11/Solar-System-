@@ -1,0 +1,16 @@
+name: first_wf
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: printing
+        run: cat README.md
+
+
