@@ -6,7 +6,7 @@ on:
       - main
 jops:
     first:
-      run-on: ubuntu-latest
+    run-on: ubuntu-latest
     steps: 
       -name: printing
       run: echo "Heba Elsayed"
