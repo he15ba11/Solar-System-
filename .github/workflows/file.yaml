@@ -1,0 +1,9 @@
+name:frist wf
+on:
+  push:
+jops:
+  first:
+run-on: ubuntu-latest
+steps: 
+  -name: printing
+  run: echo "Heba Elsayed"
