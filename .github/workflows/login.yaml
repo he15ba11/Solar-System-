@@ -10,9 +10,12 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps:
-        - name: Login_to_Docker_Hub
+        - name: Checkout Repository
           uses: actions/checkout@v2
-          with:
+        
+        - name: 
+          run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+          env:
             DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
             DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
