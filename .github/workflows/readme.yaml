@@ -1,4 +1,4 @@
-name: first_wf
+name: readme
 
 on:
   workflow_dispatch:
@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: printing
-        run: cat README.md
+        run: cat he15ba11/Solar-System-/README.md
 
 
