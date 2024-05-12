@@ -10,5 +10,7 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps: 
-      - name: printing
+      - name: write in read me
+        run: echo "write hello heba in read me file" > README.md
+      - name: printing 
         run: cat README.md
