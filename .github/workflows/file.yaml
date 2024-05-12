@@ -1,12 +1,15 @@
-name: frist wf
+name: first_wf
+
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-jops:
-    first:
-      run-on: ubuntu-latest
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
     steps: 
-      -name: printing
-      run: echo "Heba Elsayed"
+      - name: printing
+        run: echo "Heba Elsayed"
+
