@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - 'main'
       - 'feature/*'
 jobs:
     unit-testing:
@@ -17,7 +17,7 @@ jobs:
         - name: Setup NodeJS Version
           uses: actions/setup-node@v3
           with:
-            node-version: 20
+            node-version: 18
 
         - name: Install Dependencies
           run: npm install
