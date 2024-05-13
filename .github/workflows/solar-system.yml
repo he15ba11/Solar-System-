@@ -95,6 +95,6 @@ jobs:
           - name: Build and Push
             uses: docker/build-push-action@v5
             with:
-              context: ./he15ba11/Solar-System-/Dockerfile
+              context: Dockerfile
               push: true
               tags: ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
