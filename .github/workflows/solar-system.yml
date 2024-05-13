@@ -38,5 +38,8 @@ jobs:
         - name: Code Coverage
           run: npm run coverage || true
 
+        - name: install wget
+          run: npm install wget --save-dev
+
         - name: Download Report 
           run: npm run download-report
