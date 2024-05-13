@@ -74,6 +74,7 @@ jobs:
           - name: Build and Push
             uses: docker/build-push-action@v5
             with:
+              context: .
               push: false
               tags: ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
 
@@ -95,5 +96,6 @@ jobs:
           - name: Build and Push
             uses: docker/build-push-action@v5
             with:
+              context: .
               push: true
               tags: ${{secrets.DOCKER_USERNAME }}/heba-sd-solar-system:${{github.sha}}
