@@ -75,4 +75,4 @@ jobs:
             uses: docker/build-push-action@v5
             with: 
               push: false
-              tags: ${{secrets.DOCKER_USERNAME }}/solar-system${{github.sha}}
+              tags: ${{secrets.DOCKER_USERNAME }}/solar-system:${{github.sha}}
