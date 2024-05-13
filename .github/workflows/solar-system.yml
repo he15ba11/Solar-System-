@@ -35,7 +35,7 @@ jobs:
             name: Mocha-Test-Result
             path: test-results.xml
 
-    code-caverage:
+    code-coverage:
               name: Code Covarage
               runs-on: ubuntu-latest
               steps:
@@ -62,8 +62,8 @@ jobs:
 
     docker:
       name: containerization
-      needs: [unit-testing,code-caverage]
-      runs-on: ubunto-latest
+      needs: [unit-testing,code-coverage]
+      runs-on: ubuntu-latest
       steps:
           - name: Docker_login
             uses: docker/login-action@v3
