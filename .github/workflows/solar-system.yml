@@ -85,7 +85,7 @@ jobs:
                         -e MONGO_URI=$MONGO_URI \
                         -e MONGO_USERNAME:$MONGO_USERNAME \
                         -e MONGO_PASSWORD:$MONGO_PASSWORD \
-                        ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
+                        ${{secrets.DOCKER_USERNAME }}/heba-sd-solar-system:${{github.sha}}
                   export IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' heba-solar-system)
                   echo $IP
 
@@ -96,4 +96,4 @@ jobs:
             uses: docker/build-push-action@v5
             with:
               push: true
-              tags: ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
+              tags: ${{secrets.DOCKER_USERNAME }}/heba-sd-solar-system:${{github.sha}}
