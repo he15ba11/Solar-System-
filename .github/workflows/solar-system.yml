@@ -29,5 +29,11 @@ jobs:
         - name: Unit Testing
           run: npm test
         
-        - name: Code Coverage
-          run: npm run coverage
+        - name: Run Tests with Coverage
+          run: istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R spec
+
+        - name: Save Coverage Report
+          uses: actions/upload-artifact@v2
+          with:
+            name: coverage-report
+            path: coverage
