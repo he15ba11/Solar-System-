@@ -28,7 +28,10 @@ jobs:
 
         - name: Unit Testing
           run: npm test
-        
+
+        - name: Install Istanbul
+          run: npm install istanbul
+          
         - name: Run Tests with Coverage
           run: istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R spec
 
