@@ -71,6 +71,13 @@ jobs:
               username: ${{ secrets.DOCKER_USERNAME }}
               password: ${{ secrets.DOCKER_PASSWORD }}
 
+          - name: Build and Push
+            uses: docker/build-push-action@v5
+            with:
+              context: . 
+              push: false
+              tags: ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
+
           - name: Docker Image Test
             run: |
                   docker images
@@ -85,7 +92,7 @@ jobs:
 
                   echo Testing Image URL using wget
                   weget -q -O - 127.0.0.1:3000/live | grep live
-                  
+
           - name: Build and Push
             uses: docker/build-push-action@v5
             with:
