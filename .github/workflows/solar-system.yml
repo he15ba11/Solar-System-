@@ -8,8 +8,8 @@ on:
       - 'feature/*'
 env: 
   MONGO_URI: "mongodb+srv://supercluster.d83jj.mongodb.net/superData"
-  MONGO_USERNAME: ${{ vars.env.SolarSystem.MONGO_USERNAME }}
-  MONGO_PASSWORD: ${{ vars.env.SolarSystem.MONGO_PASSWORD }}
+  MONGO_USERNAME: ${{ vars.env.MONGO_USERNAME }}
+  MONGO_PASSWORD: ${{ vars.env.MONGO_PASSWORD }}
 jobs:
     unit-testing:
         name: Unit Testing
