@@ -37,3 +37,6 @@ jobs:
         
         - name: Code Coverage
           run: npm run coverage || true
+
+        - name: Download Report 
+          run: npm run download-report
