@@ -76,4 +76,4 @@ jobs:
             with:
               context: .
               push: true
-              tags: ${{secrets.DOCKER_USERNAME }}/heba-sd-solar-system:${{github.sha}}
+              tags: ${{secrets.DOCKER_USERNAME }}/heba-solar-system:${{github.sha}}
