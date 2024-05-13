@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
         console.log("error!! " + err)
     } else {
       //  console.log("MongoDB Connection Successful")
+      // "mongodb+srv://supercluster.d83jj.mongodb.net/superData"
     }
 })
 
