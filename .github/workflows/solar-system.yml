@@ -7,7 +7,7 @@ on:
       - main
       - 'feature/*'
 env: 
-  MONGO_URI: ${{ vars.env.SolarSystem.MONGO_URI }}
+  MONGO_URI: "mongodb+srv://supercluster.d83jj.mongodb.net/superData"
   MONGO_USERNAME: ${{ vars.env.SolarSystem.MONGO_USERNAME }}
   MONGO_PASSWORD: ${{ vars.env.SolarSystem.MONGO_PASSWORD }}
 jobs:
