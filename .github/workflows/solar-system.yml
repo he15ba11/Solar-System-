@@ -7,9 +7,9 @@ on:
       - main
       - 'feature/*'
 env: 
-  MONGO_URI: ${{ vars.env.MONGO_URI }}
-  MONGO_USERNAME: ${{ vars.env.MONGO_USERNAME }}
-  MONGO_PASSWORD: ${{ vars.env.MONGO_PASSWORD }}
+  MONGO_URI: ${{ vars.env.SolarSystem.MONGO_URI }}
+  MONGO_USERNAME: ${{ vars.env.SolarSystem.MONGO_USERNAME }}
+  MONGO_PASSWORD: ${{ vars.env.SolarSystem.MONGO_PASSWORD }}
 jobs:
     unit-testing:
         name: Unit Testing
@@ -28,3 +28,9 @@ jobs:
 
         - name: Unit Testing
           run: npm test
+          
+        - name: Archive Test Result
+          uses: actions/upload-artifact@v3
+          with:
+            name: Mocha-Test-Result
+            path: test-results.xml
