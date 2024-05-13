@@ -62,7 +62,7 @@ jobs:
 
     docker:
       name: containerization
-      needs: [unit-testing , code-coverage]
+      needs: [unit-testing, code-coverage]
       runs-on: ubuntu-latest
       steps:
           - name: Docker_login
